@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import userIcon from "../img/userImg.png";
 
+
 function Login() {
 
     const [email, setEmail] = useState('');
@@ -66,7 +67,8 @@ function Login() {
             </div>
         ) : (
             <div>
-                <h2>Olá, {user.name}</h2>
+
+                
                 <button type="button" 
                         className='btn-login'
                         onClick={(e) => handleLogout(e)}>Sair</button> 
