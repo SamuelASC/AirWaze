@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import userIcon from "../img/userImg.png";
 
 function Login() {
 
@@ -44,7 +45,7 @@ function Login() {
       <div className="login-form-wrap">
         {user == null ? (
             <div>
-                <h2>Login</h2>
+                <img src={userIcon} alt="Imagem do icone de um usuario" title="Logo usuario" /> 
                 <form className='login-form'>
                 <input type="email" 
                         name="email" 
@@ -59,7 +60,7 @@ function Login() {
                         onChange={(e) => setPassword(e.target.value)} />
                 <button type="submit" 
                         className='btn-login'
-                        onClick={(e) => handleLogin(e)}>Login</button>
+                        onClick={(e) => handleLogin(e)}>Entrar</button>
                 </form>
                 <p>{error}</p>
             </div>
@@ -68,7 +69,7 @@ function Login() {
                 <h2>Olá, {user.name}</h2>
                 <button type="button" 
                         className='btn-login'
-                        onClick={(e) => handleLogout(e)}>Logout</button> 
+                        onClick={(e) => handleLogout(e)}>Sair</button> 
             </div>
         )}
       </div>
