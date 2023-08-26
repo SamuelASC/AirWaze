@@ -137,7 +137,7 @@ def calculate_distance(lat1, lon1, lat2, lon2):
 @app.route("/get_drone_positions")
 def get_drone_positions():
     # Generate new dummy drone locations
-    num_drones = 100
+    num_drones = 200
     drone_positions = []
     for _ in range(num_drones):
         lat = random.uniform(-22.03, -21.98)
